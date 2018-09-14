@@ -60,6 +60,7 @@
 
 <script>
    import AlertTip from '../../components/AlertTip/AlertTip'
+
     export default {
       data(){
         return {
@@ -76,6 +77,7 @@
 
         }
       },
+
       computed:{
         rightPhone(){
           return /^1\d{10}$/.test(this.phone)
@@ -149,6 +151,7 @@
         }
 
       },
+
       components:{
         AlertTip
       }
