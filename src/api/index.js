@@ -2,6 +2,8 @@
 包含n个接口请求函数的模块
  */
   import  ajax from './ajax'
+import Mock from "mockjs";
+import data from "../mock/data";
   //const BASE_URL='http://localhost:4000'
   const  BASE_URL='/api'
 
@@ -18,7 +20,7 @@
   export const reqSearchShop=(geohsh,keyword)=>ajax(BASE_URL+'/search_shops',{geohsh,keyword})
 
   //6、用户名密码验证码登录
-  export const reqPwdLogin=({name,pwd,captcha})=>ajax(BASE_URL+'/login_pwd',{name,pwd,captcha})
+  export const reqPwdLogin=({name,pwd,captcha})=>ajax(BASE_URL+'/login_pwd',{name,pwd,captcha},'POST')
 
   //7、请求发送手机验证码
   export const reqSendCode=(phone)=>ajax(BASE_URL+'/sendcode',{phone})
@@ -31,6 +33,16 @@
 
   //10、用户登出
   export const reqLogout=()=>ajax(BASE_URL+'/logout')
+
+  //返回商品列表数据
+  export const reqShopGoods=()=>ajax('/goods')
+
+  //返回评价数据
+  export const reqShopRatings=()=>ajax('/ratings')
+
+  //返回商家信息数据
+//返回商家信息数据
+  export const reqShopInfo=()=>ajax('/info')
 
 
 
