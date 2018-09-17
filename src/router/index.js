@@ -4,10 +4,24 @@
 
 import  Vue from 'vue'
 import  VueRouter from 'vue-router'
-import  Msite from '../pages/MSite/MSite.vue'
-import  Search from '../pages/Search/Search.vue'
-import  Order from '../pages/Order/Order.vue'
-import  Profile from '../pages/Profile/Profile.vue'
+
+
+
+//import  Msite from '../pages/MSite/MSite.vue'
+//import  Search from '../pages/Search/Search.vue'
+//import  Order from '../pages/Order/Order.vue'
+//import  Profile from '../pages/Profile/Profile.vue'
+
+//返回路由组件的函数，只有执行此函数才会加载路由函数
+//这个函数在请求对应的路由路径的时候才会执行
+
+const  Msite=()=>import('../pages/MSite/MSite.vue')
+const  Search=()=>import('../pages/Search/Search.vue')
+const  Order=()=>import('../pages/Order/Order.vue')
+const  Profile=()=>import('../pages/Profile/Profile.vue')
+
+
+
 import  Login from '../pages/Login/Login.vue'
 import  Shop from '../pages/Shop/Shop'
 import  ShopGoods from '../pages/Shop/ShopGoods/ShopGoods'

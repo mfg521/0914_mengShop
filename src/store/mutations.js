@@ -12,7 +12,7 @@ import {
   RECEIVE_USER_INFO,
   RESET_USER_INFO,
   DECREMENT_FOOD_COUNT,
-  INCREMENT_FOOD_COUNT
+  INCREMENT_FOOD_COUNT, CLEAR_CART
 } from './mutation-types'
 import  Vue from "vue";
 
@@ -63,4 +63,9 @@ export  default {
       }
     }
   },
+
+  [CLEAR_CART](state){
+    state.cartFoods.forEach(food=>food.count=0)
+    state.cartFoods=[]
+  }
 }

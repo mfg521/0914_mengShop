@@ -11,7 +11,8 @@ import {
   RECEIVE_INFO,
   RECEIVE_RATINGS,
   INCREMENT_FOOD_COUNT,
-  DECREMENT_FOOD_COUNT
+  DECREMENT_FOOD_COUNT,
+  CLEAR_CART
 } from './mutation-types'
 
 import  {
@@ -124,7 +125,12 @@ export default  {
     }else{  //减少
       commit(DECREMENT_FOOD_COUNT,{food})
     }
+  },
+
+  cleatCount({commit}){
+     commit(CLEAR_CART)
   }
+
 
 
 }

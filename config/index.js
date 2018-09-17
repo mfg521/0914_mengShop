@@ -16,7 +16,6 @@ module.exports = {
         changeOrigin:true,  //支持跨域
         pathRewrite:{       //重写路径：去掉开头路径中的'/api'
           '^/api':''
-
         }
       }
     },
